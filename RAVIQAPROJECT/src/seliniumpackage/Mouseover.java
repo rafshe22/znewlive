@@ -10,7 +10,7 @@ public class Mouseover {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver1.exe");
 		
 		// 2. Initialize WebDriver object through ChromeDriver class.
 		ChromeDriver browserObject = new ChromeDriver();
@@ -33,7 +33,7 @@ System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.e
 	        action.moveToElement(element).build().perform();
 	        //Thread.sleep(3000);
 		// 8. Select a element from the pop up box and perform click
-	        browserObject.findElement(By.xpath("//span[contains(text(),'Create a List')]")).click();
+	        browserObject.findElement(By.xpath("//*[@id=\"nav-al-wishlist\"]/a[1]/span")).click();
 		// 9. Close the browser
 	}
 

@@ -9,7 +9,7 @@ public class Rightclick {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver1.exe");
 		// 2. Initialize WebDriver object through ChromeDriver class.
 		ChromeDriver browserObject = new ChromeDriver();
 		// 3. Open the web page http://swisnl.github.io/jQuery-contextMenu/demo.html
@@ -23,12 +23,12 @@ public class Rightclick {
        // 6. Using the action reference call the contextclick method and pass  element to perform right click
         action.contextClick(rightClickElement).build().perform();
         
-        browserObject.close();
+       
 	}
 
-
+	
 		
-		
+	
 	}
 
 
