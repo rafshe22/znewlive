@@ -13,7 +13,8 @@ public class AlertClass {
 		   System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver1.exe");
 		 // 2. Initialize Webdriver object through ChromeDriver class.
 	        ChromeDriver  browserObject = new ChromeDriver();
-	    // 3. Open form page of http://www.training.qaonlinetraining.com/testPage.php
+	    // 3. Open form page of http://www.training
+	      
 	        browserObject.get("http://www.training.qaonlinetraining.com/testPage.php");
 	     // 4. Locate the alert button and perform click 
 	        browserObject.findElement(By.id("alert")).click();

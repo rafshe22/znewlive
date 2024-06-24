@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGpackcage.openwebsite">
+      <class name="testNGpackcage.Priorityclass">
         <methods>
           <include name="openingYahooSite"/>
+          <include name="openingCnbcSite"/>
+          <include name="openingAmazonSite"/>
         </methods>
-      </class> <!-- testNGpackcage.openwebsite -->
+      </class> <!-- testNGpackcage.Priorityclass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
