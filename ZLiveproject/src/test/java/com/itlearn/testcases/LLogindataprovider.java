@@ -4,6 +4,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.itlearn.pages.BBaseclass;
+
 import com.itlearn.pages.LLoginpage;
 
 import com.itlearn.utilities.RReadexcelfile;
@@ -11,10 +12,9 @@ import com.itlearn.utilities.RReadexcelfile;
 public class LLogindataprovider extends BBaseclass {
 	
 	
-	String filename=System.getProperty("user. dir")+"\\Testdata\\logindata.xlxs";
-	@Test(dataProvider="LLogindataprovider")
-	
-	public void loginvrify(String username ,String password) {
+	String filename=System.getProperty("user.dir")+"\\TestData\\loginData.xlsx";
+	@Test(dataProvider="LLoginDataprovider")
+	public void loginverify(String username ,String password) {
 		
 		
 		LLoginpage ww=new LLoginpage(driver);
@@ -31,6 +31,7 @@ public class LLogindataprovider extends BBaseclass {
 	
 	
 	
+	
 	@DataProvider
 	public String [][] LLoginDataprovider() {
 		
@@ -40,10 +41,8 @@ public class LLogindataprovider extends BBaseclass {
 	System.out.println(zzrows);
 	int zzcolumns=RReadexcelfile.getcolcount(filename,"login");
 	System.out.println(zzcolumns);
-			String data [][]=new String  [zzrows][zzcolumns];
 			
 		
-			System.out.println(zzcolumns);
 			
 			String Data [][]=new String[zzrows-1][zzcolumns];
 			
@@ -53,12 +52,12 @@ public class LLogindataprovider extends BBaseclass {
 					
 				{
 					
-					data[i-1][j]=RReadexcelfile.getcellvalue(filename, "login", 1, j);
+				Data[i-1][j]=RReadexcelfile.getcellvalue(filename, "loginData", i, j);
 					
 					
 				}
 			}
-				return data;
+				return Data;
 			}
 			
 			
@@ -66,11 +65,16 @@ public class LLogindataprovider extends BBaseclass {
 }
 				
 				
+	
+	
+	
+		
+
+		
+		
 			
-			
-			
-			
-			
+	
+
 			
 			
 	

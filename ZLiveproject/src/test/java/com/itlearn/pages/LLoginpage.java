@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LLoginpage {
 	
-	public static final String Logout = null;
-	WebDriver driver;
+	
+	WebDriver Driver;
 	
 	public LLoginpage(WebDriver driver) {
-driver=driver; 
 
+		Driver=driver;
 PageFactory.initElements(driver, this);
 	
 	}
@@ -20,7 +20,7 @@ PageFactory.initElements(driver, this);
 	@FindBy(id="loginlabel") WebElement loginclick;
 	@FindBy(id="user_login")WebElement user;
 	@FindBy(id="user_pass")WebElement pass;
-	@FindBy(id="wp-submit")WebElement clicksubmit;
+	@FindBy(id="wp-submit")WebElement submitclick;
 	
 @FindBy(xpath="//*[@id=\"gk-login-toggle\"]/i") WebElement logoutimage;
 	
@@ -31,7 +31,7 @@ PageFactory.initElements(driver, this);
 		loginclick.click();
 		user.sendKeys(username);
 		pass.sendKeys(password);
-		clicksubmit.sendKeys();
+		submitclick.sendKeys();
 	}
 
 
@@ -51,3 +51,7 @@ public void Logout() {
 
 
 }
+
+
+
+

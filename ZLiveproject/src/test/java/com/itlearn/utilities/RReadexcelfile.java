@@ -14,7 +14,7 @@ public class RReadexcelfile {
 
 	
 	
-	private static final int sheetindex = 0;
+	
 
 	public static final String getcellvalue = null;
 	public static FileInputStream inputStream;
@@ -35,8 +35,9 @@ public class RReadexcelfile {
 			return cell.getStringCellValue();
 			
 			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		} 
+		catch (Exception e) {
+			
 			e.printStackTrace();
 			
 			return " ";
@@ -57,8 +58,6 @@ public class RReadexcelfile {
 			return xx;
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			
 			return 0 ;
 		}
@@ -82,8 +81,7 @@ public class RReadexcelfile {
 				
 				
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				
 				
 				return 0;
 			}
@@ -118,7 +116,5 @@ public class RReadexcelfile {
 		
 		
 		
-		
-
-		
+	
 

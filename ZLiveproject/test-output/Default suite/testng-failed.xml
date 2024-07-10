@@ -5,7 +5,7 @@
     <classes>
       <class name="com.itlearn.testcases.LLogindataprovider">
         <methods>
-          <include name="loginvrify"/>
+          <include name="loginverify" invocation-numbers="0 1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.itlearn.testcases.LLogindataprovider -->
