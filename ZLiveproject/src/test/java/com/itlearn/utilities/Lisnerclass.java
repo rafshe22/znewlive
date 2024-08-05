@@ -1,5 +1,7 @@
 package com.itlearn.utilities;
 
-public class Lisnerclass {
+import org.testng.ITestListener;
 
+public class Lisnerclass implements ITestListener{
+	
 }
