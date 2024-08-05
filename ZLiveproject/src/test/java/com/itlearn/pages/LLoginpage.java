@@ -17,7 +17,7 @@ PageFactory.initElements(driver, this);
 	
 	}
 	
-	@FindBy(id="loginlabel") WebElement loginclick;
+	@FindBy(xpath="//*[@id=\"loginlabel\"]") WebElement loginclick;
 	@FindBy(id="user_login")WebElement user;
 	@FindBy(id="user_pass")WebElement pass;
 	@FindBy(id="wp-submit")WebElement submitclick;
@@ -31,7 +31,7 @@ PageFactory.initElements(driver, this);
 		loginclick.click();
 		user.sendKeys(username);
 		pass.sendKeys(password);
-		submitclick.sendKeys();
+		submitclick.click();
 	}
 
 
@@ -44,10 +44,6 @@ public void logout()
 
 
 
-public void Logout() {
-	// TODO Auto-generated method stub
-	
-}
 
 
 }

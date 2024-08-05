@@ -14,14 +14,14 @@ public class LLogindataprovider extends BBaseclass {
 	
 	String filename=System.getProperty("user.dir")+"\\TestData\\loginData.xlsx";
 	@Test(dataProvider="LLoginDataprovider")
-	public void loginverify(String username ,String password) {
+	public void loginVerify(String username ,String password) {
 		
 		
 		LLoginpage ww=new LLoginpage(driver);
 		
 		ww.login(username,password);
 		
-		ww.Logout();
+		ww.logout();
 		
 		}
 		
@@ -52,12 +52,13 @@ public class LLogindataprovider extends BBaseclass {
 					
 				{
 					
-				Data[i-1][j]=RReadexcelfile.getcellvalue(filename, "loginData", i, j);
+				Data[i-1][j]=RReadexcelfile.getcellvalue(filename, "login", i, j);
 					
 					
 				}
 			}
-				return Data;
+				
+			return Data;
 			}
 			
 			

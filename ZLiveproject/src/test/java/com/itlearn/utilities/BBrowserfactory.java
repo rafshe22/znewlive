@@ -21,33 +21,25 @@ public class BBrowserfactory {
 		if(browsername.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
-	
+			driver= new ChromeDriver();
 		}
 		
-		
-		if(browsername.equals("firefox")) {
-			
+		if(browsername.equals("firefox"))
+		{
 			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();
-			
-			
+			driver= new FirefoxDriver();
 		}
 		
-		if(browsername.equals("edge")) {
-			
-			
+		if(browsername.equals("edge"))
+		{
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			driver= new EdgeDriver();
 		}
 		
-		
-		driver.manage().window().minimize();
+		driver.manage().window().maximize();
 		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-	
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
-	
 		return driver;
 		
 		
